@@ -17,8 +17,6 @@
         <item name="colorErrorContainer">@color/red</item>
         <item name="colorOnError">@color/white</item>
         <item name="colorOnErrorContainer">@color/white</item>
-        <item name="colorBackground">@color/background</item>
-        <item name="colorOnBackground">@color/white</item>
         <item name="colorSurface">@color/board_bg</item>
         <item name="colorOnSurface">@color/white</item>
         <item name="colorSurfaceVariant">@color/gray</item>
