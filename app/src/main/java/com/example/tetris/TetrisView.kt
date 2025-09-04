@@ -124,7 +124,7 @@ class TetrisView @JvmOverloads constructor(
             val textWidth = paint.measureText(text)
             canvas.drawText(text, 
                 (width - textWidth) / 2, 
-                height / 2, 
+                height / 2f, 
                 paint)
         }
         
@@ -135,7 +135,7 @@ class TetrisView @JvmOverloads constructor(
             val textWidth = paint.measureText(text)
             canvas.drawText(text,
                 (width - textWidth) / 2,
-                height / 2,
+                height / 2f,
                 paint)
         }
     }
