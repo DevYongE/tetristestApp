@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Tetris</string>
+    <string name="score">Score: %d</string>
+    <string name="level">Level: %d</string>
+    <string name="lines">Lines: %d</string>
+    <string name="game_over">Game Over!</string>
+    <string name="new_game">New Game</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+</resources>
