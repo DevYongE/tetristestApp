@@ -153,7 +153,7 @@ class TetrisView @JvmOverloads constructor(
                     val x = nextStartX + col * cellSize * 0.8f
                     val y = nextStartY + row * cellSize * 0.8f
                     
-                    paint.color = colors[nextShape[row][col]]
+                    paint.color = pieceColors[nextShape[row][col]][0]
                     canvas.drawRect(x, y, x + cellSize * 0.8f, y + cellSize * 0.8f, paint)
                 }
             }
