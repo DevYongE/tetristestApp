@@ -1,18 +1,16 @@
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-
-repositories {
-    google()
-    mavenCentral()
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
-    compileSdkVersion 30
+    namespace 'com.example.tetris'
+    compileSdk 35
 
     defaultConfig {
         applicationId "com.example.tetris"
-        minSdkVersion 21
-        targetSdkVersion 30
+        minSdk 24
+        targetSdk 35
         versionCode 1
         versionName "1.0"
 
