@@ -85,4 +85,38 @@ class GameBoard(val width: Int = 10, val height: Int = 20) {
             }
         }
     }
+    
+    // Additional methods for item system
+    fun clearSingleLine(lineIndex: Int) {
+        if (lineIndex in 0 until height) {
+            for (row in lineIndex downTo 1) {
+                grid[row] = grid[row - 1].clone()
+            }
+            grid[0] = IntArray(width) { 0 }
+        }
+    }
+    
+    fun clearCell(x: Int, y: Int) {
+        if (x in 0 until width && y in 0 until height) {
+            grid[y][x] = 0
+        }
+    }
+    
+    fun fillRandomLine(): Int {
+        // Add a random line at the bottom for added difficulty
+        for (row in 0 until height - 1) {
+            grid[row] = grid[row + 1].clone()
+        }
+        
+        // Fill bottom line with random blocks, leaving some gaps
+        for (col in 0 until width) {
+            grid[height - 1][col] = if ((0..100).random() < 70) {
+                (1..7).random() // Random piece color
+            } else {
+                0 // Empty space
+            }
+        }
+        
+        return 1 // Return lines added
+    }
 }

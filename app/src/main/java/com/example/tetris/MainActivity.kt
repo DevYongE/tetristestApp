@@ -134,9 +134,12 @@ class MainActivity : AppCompatActivity() {
     private fun startGameLoop() {
         gameRunnable = object : Runnable {
             override fun run() {
-                if (!game.isPaused && !game.isGameOver) {
+                val currentTime = System.currentTimeMillis()
+                game.updateItems(currentTime)
+                
+                if (!game.isPaused && !game.isGameOver && !game.isFrozen()) {
                     game.moveDown()
-                    gameSpeed = maxOf(100L, 800L - (game.level - 1) * 50L)
+                    gameSpeed = game.getGameSpeed()
                     tetrisView.invalidate()
                 }
                 gameHandler.postDelayed(this, gameSpeed)
